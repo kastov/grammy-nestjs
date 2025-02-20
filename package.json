@@ -2,6 +2,15 @@
   "name": "@grammyjs/nestjs",
   "description": "grammY module for NestJS",
   "version": "1.0.1",
+  "scripts": {
+    "format": "nx format:write",
+    "lint": "nx run-many --all --target=lint",
+    "posttest": "yarn format",
+    "test": "nx test",
+    "pretest": "yarn lint",
+    "publish:version": "nx run grammy-nestjs:version",
+    "publish:npm": "nx run grammy-nestjs:deploy --no-build"
+  },
   "author": {
     "name": "Mike Crowe",
     "email": "drmikecrowe@gmail.com"
@@ -87,15 +96,5 @@
     ]
   },
   "prettier": "@drmikecrowe/prettier-config",
-  "repository": "grammyjs/nestjs",
-  "scripts": {
-    "format": "nx format:write",
-    "lint": "nx run-many --all --target=lint",
-    "posttest": "yarn format",
-    "prepare": "husky install && sed -i 's@#!/bin/sh@#!/usr/bin/env bash@g' .husky/_/husky.sh && sed -i 's@sh -e@bash -e@g' .husky/_/husky.sh",
-    "test": "nx test",
-    "pretest": "yarn lint",
-    "publish:version": "nx run grammy-nestjs:version",
-    "publish:npm": "nx run grammy-nestjs:deploy --no-build"
-  }
+  "repository": "grammyjs/nestjs"
 }

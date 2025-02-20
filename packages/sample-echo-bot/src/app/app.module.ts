@@ -13,6 +13,7 @@ const log = debug('bot:app.module')
       botName: EchoBotName,
       token: process.env.BOT_TOKEN,
       include: [EchoBotModule],
+      disableUpdates: true,
       pollingOptions: {
         allowed_updates: ['chat_member', 'message', 'callback_query'],
       },

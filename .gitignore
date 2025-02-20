@@ -47,3 +47,5 @@ firebase*.json
 .firebaserc
 log/
 firebase-export*
+
+.nx

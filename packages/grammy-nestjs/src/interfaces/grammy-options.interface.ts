@@ -10,6 +10,7 @@ export interface GrammyModuleOptions {
   // eslint-disable-next-line @typescript-eslint/ban-types
   include?: Function[]
   middlewares?: ReadonlyArray<Middleware<any>>
+  disableUpdates?: boolean
 }
 
 export interface GrammyOptionsFactory {
